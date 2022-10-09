@@ -1,0 +1,50 @@
+section(class='card')
+    div(class="card-content")
+        form(action=`/birds/${bird._id}/update` method="POST" enctype="multipart/form-data")     
+            fieldset 
+                legend Common Names
+                label(for="primary_name") Primary Name 
+                input(type="text" name="primary_name", value=bird.primary_name, required)
+                label(for="english_name") English Name 
+                input(type="text" name="english_name", value=bird.english_name, required) 
+                label(for="other_names") Other Name 
+                textarea(name="other_names" cols="50" rows="10" )=bird.other_names 
+            fieldset 
+                legend Taxonomy 
+                label(for="scientific_name") Scientific Name 
+                input(type="text" name="scientific_name" value=bird.scientific_name required) 
+                label(for="order") Order
+                input(type="text" name="order" value=bird.order required) 
+                label(for="family") Family 
+                input(type="text" name="family" value=bird.family required) 
+            fieldset 
+                legend Size 
+                label(for="length") Length(cm)  
+                input(type="number" name="length" value=bird.size.length.value)
+                label(for="wight") Weight(g)
+                input(type="number" name="weight" value=bird.size.weight.value) 
+            fieldset 
+                legend Conservation
+                label(for="status") Status 
+                select(name='status' id='status')
+                    option(class="Not-Threatened") Not Threatened
+                    option(class="Naturally-Uncommon") Naturally Uncommon
+                    option(class="Relict") Relict
+                    option(class="Recovering") Recovering
+                    option(class="Declining") Declining
+                    option(class="Nationally-Increasing") Nationally Increasing
+                    option(class="Nationally-Vulnerable") Nationally Vulnerable
+                    option(class="Nationally-Endangered") Nationally Endangered
+                    option(class="Nationally-Critical") Nationally Critical
+                    option(class="Data-Deficient") Data Deficient
+            fieldset 
+                legend Photo 
+                label(for="photo_credit") Photo Credit 
+                input(type="text" name='photo_credit' value=bird.photo.credit) 
+                label(for="photo_upload") Upload new photo 
+                input(type="file" name="photo_upload" id="photo_upload")
+                label(for="photo_source") Photo Preview
+                img(src=`/images/${bird.photo.source}` alt=`Photo of ${bird.primary_name}`) 
+                input(type="text" id="upload_source" value=bird.photo.source )
+
+            button(type='submit') SAVE BIRD

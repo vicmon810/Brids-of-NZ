@@ -28,5 +28,7 @@ section(class='card')
             b Weight 
             span=`${bird.size.weight.value} ${bird.size.weight.units}`
 
-    a(href=`/birds/${bird._id}`)
-        button VIEW BIRD
+    a(href=`/birds/${bird._id}/update`)
+        button EDIT
+    a(href=`/birds/${bird._id}/delete`)
+        button DELETE

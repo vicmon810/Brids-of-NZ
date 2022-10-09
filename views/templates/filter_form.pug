@@ -16,9 +16,9 @@ form(action='' method='')
         option(class="Nationally-Endangered") Nationally Endangered
         option(class="Nationally-Critical") Nationally Critical
         option(class="Data-Deficient") Data Deficient
-    
+
     label(for='sort') Sort By
-    select(name='sort', id='sort')
+    select(name='sort' id='sort')
         optgroup(label='Name')
             option(value='alphabetical') alphabetical
             option(value='Reverse alphabetical') Reverse alphabetical
@@ -31,7 +31,7 @@ form(action='' method='')
         optgroup(label='Conservation Status')
             option(value='Unthreatened to endangered') Unthreatened to endangered
             option(value='Endangered to unthreatened') Endangered to unthreatened 
-    
+
     button(type='submit') Filter Birds
 
     p= `${birds.length} birds found` 

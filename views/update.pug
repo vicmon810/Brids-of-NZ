@@ -12,8 +12,8 @@ html(lang='en')
     body
         include templates/header.pug
         aside
-            include templates/home.pug
-            include templates/status_legend.pug
+            include templates/home.pug  
         main
-            include templates/create_template.pug
+            each bird in birds
+                include templates/edit_template.pug
         include templates/footer.pug
