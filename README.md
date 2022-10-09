@@ -1,6 +1,8 @@
 # back-end assignment
 
+Heroku link:
 
+If the user lazy enough that there is no BUG exist, currently the status of conservation is display as text rather options. and other function work fine.    
 
 ## Getting started
 

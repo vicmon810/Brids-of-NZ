@@ -1,0 +1,58 @@
+
+<section class="card">
+  <div class="card-content">
+    <form action="/birds/create/" method="POST" enctype="multipart/form-data"> 
+      <fieldset> 
+        <legend>Common Names</legend>
+        <label for="primary_name">Primary Name </label>
+        <input type="text" name="primary_name" id="pn" required="required"/>
+        <label for="english_name">English Name </label>
+        <input type="text" name="english_name" id="en" required="required"/>
+        <label for="other_names">Other Name </label>
+        <textarea name="other_names" cols="50" rows="10" id="on"></textarea>
+      </fieldset>
+      <fieldset> 
+        <legend>Taxonomy </legend>
+        <label for="scientific_name">Scientific Name </label>
+        <input type="text" name="scientific_name" id="sn" required="required"/>
+        <label for="order">Order</label>
+        <input type="text" name="order" id="order" required="required"/>
+        <label for="family">Family </label>
+        <input type="text" name="family" id="family" required="required"/>
+      </fieldset>
+      <fieldset> 
+        <legend>Size </legend>
+        <label for="length">Length(cm)  </label>
+        <input type="number" name="length" id="length"/>
+        <label for="wight">Weight(g)</label>
+        <input type="number" name="weight" id="weight"/>
+      </fieldset>
+      <fieldset> 
+        <legend>Conservation</legend>
+        <label for="status">Status </label>
+        <select name="status" id="status">
+          <option selected="selected">All</option>
+          <option class="Not-Threatened">Not Threatened</option>
+          <option class="Naturally-Uncommon">Naturally Uncommon</option>
+          <option class="Relict">Relict</option>
+          <option class="Recovering">Recovering</option>
+          <option class="Declining">Declining</option>
+          <option class="Nationally-Increasing">Nationally Increasing</option>
+          <option class="Nationally-Vulnerable">Nationally Vulnerable</option>
+          <option class="Nationally-Endangered">Nationally Endangered</option>
+          <option class="Nationally-Critical">Nationally Critical</option>
+          <option class="Data-Deficient">Data Deficient</option>
+        </select>
+      </fieldset>
+      <fieldset> 
+        <legend>Photo </legend>
+        <label for="photo_credit">Photo Credit </label>
+        <input type="text" name="photo_credit" id="photo_credit"/>
+        <label for="photo_upload">Upload new photo </label>
+        <input type="file" name="photo_upload" id="photo_upload" onchange="oninput='pic.src=window.URL.createObjectURL(this.files[0])'"/>
+        <label for="photo_source">Photo Preview </label><img src="output" alt="birds"/>
+      </fieldset><a href="/bird/create">
+        <button id="create-button" type="submit">CREATE BIRD</button></a>
+    </form>
+  </div>
+</section>
