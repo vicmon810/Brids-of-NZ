@@ -1,1 +1,1 @@
-web: npm run startz
+web: npm run start
