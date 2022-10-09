@@ -26,17 +26,7 @@ section(class='card')
             fieldset 
                 legend Conservation
                 label(for="status") Status 
-                select(name='status' id='status')
-                    option(class="Not-Threatened") Not Threatened
-                    option(class="Naturally-Uncommon") Naturally Uncommon
-                    option(class="Relict") Relict
-                    option(class="Recovering") Recovering
-                    option(class="Declining") Declining
-                    option(class="Nationally-Increasing") Nationally Increasing
-                    option(class="Nationally-Vulnerable") Nationally Vulnerable
-                    option(class="Nationally-Endangered") Nationally Endangered
-                    option(class="Nationally-Critical") Nationally Critical
-                    option(class="Data-Deficient") Data Deficient
+                input(type="text" name="status" value=bird.status) 
             fieldset 
                 legend Photo 
                 label(for="photo_credit") Photo Credit 
