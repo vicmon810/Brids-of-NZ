@@ -24,7 +24,6 @@ jobs:
 
 
       - name: Install and build client dependencies
-        working-directory: Project/client
         run: |
           npm ci
           npm run build
