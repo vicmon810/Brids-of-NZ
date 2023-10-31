@@ -17,12 +17,6 @@ This website hosts a comprehensive catalog of New Zealand's bird species. Users 
 ![demo2](demo2.png)
 
 
-# How to start: 
-`
-clone this repo
-cd BIRDS OF NZ
-node server
-`
 
 # Credit: 
 [Birds data](https://www.doc.govt.nz/nature/conservation-status/)
